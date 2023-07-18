@@ -1,0 +1,119 @@
+/* Position of the Left ScoreBox */
+#leftScoreBox {
+    top: 13px;
+    left: 563px;
+}
+
+/* Position of the Right ScoreBox */
+#rightScoreBox {
+    top: 13px;
+    left: 649px;
+}
+
+/* width and height of the Left ScoreBox and Right ScoreBox */
+/* These should only be defined together if they are meant to be the same size */
+/* line-height should be the same px value as height */
+#leftScoreBox, #rightScoreBox {
+    width: 69px;
+    height: 69px;
+    line-height: 66px;
+}
+/* position of the timer  */
+#timercss {
+    width: 155px;
+    height: 68px;
+    line-height: 66px;
+    top: 13px;
+    left: 241px;
+}
+
+/* Position of the Left NameBox */
+#leftNameBox {
+    top: 12px;
+    left: 409px;
+}
+
+/* Position of the Right NameBox 
+    transform: skew(-10deg);*/
+#rightNameBox {
+    top: 12px;
+    left: 719px;
+}
+#player1ColorBox {
+    width: 8px;
+    height: 66px;
+    top: 12px;
+    left: 401px;
+    border: solid;
+
+}
+#player2ColorBox {
+    width: 8px;
+    height: 66px;
+    top: 12px;
+    left: 870px;
+    border: solid;
+}
+
+
+
+#cardColorBox {
+    width: 84px;
+    height: 90px;
+    top: 80px;
+    left: 95px;
+    border-radius: 10px;
+}
+#playerNameBox {
+    width: 745px;
+    height: 60px;
+    top: 190px;
+    left: 90px;
+    line-height: 50px;
+    text-align: left;
+}
+
+
+/* width and height of the Left NameBox and Right NameBox */
+/* These should only be defined together if they are meant to be the same size */
+ /* line-height should be the same px value as height */
+#leftNameBox, #rightNameBox {
+    width: 152px;
+    height: 71px;
+    line-height: 65px;
+}
+
+/* Position of the extraTimerBox */
+#extraTimerBox {
+    width: 155px;
+    height: 50px;
+    top: 88px;
+    left: 241px;
+    line-height: 50px;
+}
+
+/* Position of the extraTimeBox */
+#extraTimeBox {
+    width: 51px;
+    height: 50px;
+    top: 88px;
+    left: 403px;
+    line-height: 50px;
+}
+
+/* width and height of the extraTimerBox and extraTimeBox */
+/* These should only be defined together if they are meant to be the same size */
+/* line-height should be the same px value as height */
+/*#extraTimerBox, #extraTimeBox {
+    width: 230px;
+    height: 25px;
+    line-height: 25px;
+}*/
+
+/* Uncomment everything below this to debug the width, height and positions of all elements. */
+/* To uncomment, remove this line
+.contentBox {
+	background-color: blue;
+	opacity: 0.7;
+}
+And remove this line*/

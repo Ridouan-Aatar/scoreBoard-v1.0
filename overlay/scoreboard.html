@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="../importantFiles/overlay/js/jquery.3.5.1.min.js"></script>
+		<script type="text/javascript" src="../importantFiles/overlay/js/fitty.js"></script>
+
+		<script type="text/javascript" src="../importantFiles/overlay/js/constants.js"></script>
+		<script type="text/javascript" src="../importantFiles/overlay/js/variables.js"></script>
+		<script type="text/javascript" src="../importantFiles/overlay/js/timer.js"></script>
+		<script type="text/javascript" src="../importantFiles/overlay/js/helper.js"></script>
+		<script type="text/javascript" src="../importantFiles/overlay/js/overlayManager.js"></script>
+		<script type="text/javascript" src="../importantFiles/overlay/js/webSocket.js"></script>
+
+		<!-- Custom font links here -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="../importantFiles/overlay/css/styles.css"></link>
+		<link rel="stylesheet" type="text/css" href="../importantFiles/overlay/css/font.css"></link>
+		<link rel="stylesheet" type="text/css" href="../importantFiles/overlay/css/contentBoxes.css"></link>
+		<link rel="stylesheet" type="text/css" href="../importantFiles/overlay/css/queu.css"></link>
+		<link rel="stylesheet" type="text/css" href="../importantFiles/overlay/css/snackbar.css"></link>
+
+		<style id="contentCSS" type="text/css"></style>
+		<link id="contentFile" rel="stylesheet" type="text/css"></link>
+	</head>
+	<body>
+		<!-- divs to contain the background images -->
+		<div id="mainTimer" class="scoreboardPart"></div>
+		<div id="scoreboard" class="scoreboardPart"></div>
+		<div id="extraTimer" class="scoreboardPart"></div>
+		<div id="extraTime" class="scoreboardPart"></div>
+		<div id="tournamentLogo" ></div>
+		<div id="circle1" ></div>
+		<div id="circle2" ></div>
+
+		<!-- divs to contain text content -->
+		<!-- spans that contain the text -->
+		<div class="contentBox" id="leftScoreBox">
+			<span class="playerScoreText" id="player1ScoreText"></span>
+		</div>
+		<div class="contentBox" id="leftNameBox">
+			<span class="playerNameText" id="player1NameText"></span>
+		</div>
+
+		
+		<!-- in middle the Timer -->
+
+		<div class="contentBox" id="timercss">
+			<span class="timerclass" id="timer"></span>
+		</div>
+		<!--------------->
+		<div class="contentBox" id="player1ColorBox">
+		</div>
+
+		<div class="contentBox" id="player2ColorBox">
+		</div>
+
+		<div class="contentBox" id="rightNameBox">
+			<span class="playerNameText" id="player2NameText"></span>
+		</div>
+		<div class="contentBox" id="rightScoreBox">
+			<span class="playerScoreText" id="player2ScoreText"></span>
+		</div>
+
+		<div class="contentBox" id="extraTimerBox">
+			<span class="infoText" id="extraTimerText"></span>
+		</div>
+
+		<div class="contentBox" id="extraTimeBox">
+			<span class="infoText" id="extraTimeText"></span>
+		</div>
+
+		<!-- snackbar -->
+		<div class="snackbar" id="snackbar"></div>
+	</body>
+	
+	<script type="text/javascript">
+		var fittyElements = [
+			{ selector: ".playerNameText", minSize: 8, maxSize: 28, multiLine: false },
+			{ selector: ".playerScoreText", minSize: 8, maxSize: 36, multiLine: false },
+			{ selector: ".infoText", minSize: 20, maxSize: 40, multiLine: false },
+			{ selector: ".timerclass", minSize: 20, maxSize: 50, multiLine: false }//<-------------
+		];
+
+		$(document).ready(function () {
+			initOverlayManager(fittyElements);
+		});
+
+		$(window).on("beforeunload", function () {
+			try {
+				sendDisconnectingMessage();
+			} catch (ex) {
+				console.log(ex);
+			}
+		});
+	</script>
+</html>

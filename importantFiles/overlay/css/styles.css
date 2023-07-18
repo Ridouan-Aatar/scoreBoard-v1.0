@@ -1,0 +1,212 @@
+/* TEXT */
+
+span {
+    color: #ffffff;
+    text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, 2px 0px 0 #000000, -2px 0px 0 #000000, 0px 2px 0 #000000, 0px -2px 0 #000000;
+    -webkit-font-smoothing: antialiased;
+    font-size: 40px;
+}
+
+
+#timer,#extraTimerText,#extraTimeText{
+    color: black;
+    font-family: "lato";
+    text-shadow: none;
+}
+#timer{
+    font-size: 50px;
+}
+#extraTimerText,#extraTimeText{
+    font-size: 40px;
+}
+
+
+/* divs to contain the background images */
+
+/* width and height should be the same size as the background images */
+.scoreboardPart {
+    margin: 0;
+    padding: 0;
+    width: 1920px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hide_scoreboardPart {
+    animation: opacityHalfFadeOut;
+    animation-duration: 3s;
+}
+
+#mainTimer {
+    background-image: url("../../../overlay/mainTimer1.png");
+    animation: opacityHalfFadeIn;
+    animation-duration: 2s;
+}
+#card {
+    margin: 0;
+    padding: 0;
+    width: 860px;
+    height: 269px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../../../overlay/card.png");
+    animation: opacityHalfFadeIn;
+    animation-duration: 2s;
+}
+#hide_mainTimer {
+    animation: opacityHalfFadeOut;
+    animation-duration: 2s;
+}
+
+#scoreboard {
+    background-image: url("../../../overlay/ScoreBoard1.png");
+    animation: opacityGradualFadeIn;
+    animation-duration: 1s;
+}
+#hide_scoreboard {
+    animation: opacityGradualFadeOut;
+    animation-duration: 1s;
+}
+
+#extraTimer {
+    background-image: url("../../../overlay/extraTimer1.png");
+opacity: 0;
+}
+#hide_extraTimer {
+    animation: opacityHalfFadeOut;
+    animation-duration: 3s;
+}
+
+#extraTime {
+    background-image: url("../../../overlay/extraTime1.png");
+ opacity: 0;
+}
+#hide_extraTime {
+    animation: opacityHalfFadeOut;
+    animation-duration: 2s;
+}
+
+#tournamentLogo {
+     margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    top: 2px;
+    left: 864px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../../overlay/logo.PNG);
+    animation: opacityGradualFadeIn;
+    animation-duration: 0.5s;
+    z-index: 1;
+}
+
+#circle1{
+    border-radius: 90px;
+    background: white;
+    position: fixed;
+    top: 5px;
+    left: 904px;
+    width: 95px;
+    height: 95px;
+    opacity: 1;
+    animation: opacityGradualFadeIn;
+    animation-duration: 0.75s;
+    z-index: -1;
+}
+#circle2{
+border-radius: 90px;
+    background: green;
+    position: fixed;
+    top: 3px;
+    left: 901px;
+    width: 100px;
+    height: 100px;
+    opacity: 0.75;
+    animation: opacityGradualFadeIn;
+    animation-duration: 1s;
+    z-index: -2;
+}
+/* divs to contain text content */
+
+.contentBox {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    animation: opacityThreeQuarterFadeIn;
+    animation-duration: 4s;
+}
+
+/* ANIMATIONS */
+
+@keyframes opacityGradualFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes opacityGradualFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opacityHalfFadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes opacityHalfFadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opacityThreeQuarterFadeIn {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes opacityThreeQuarterFadeOut {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

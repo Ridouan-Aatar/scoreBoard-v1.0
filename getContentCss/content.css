@@ -1,0 +1,6 @@
+#player1NameText:before { content: "RMA"; }
+#player1ScoreText:before { content: "2" }
+#player2NameText:before { content: "FCB"; }
+#player2ScoreText:before { content: "8" }
+#player1ColorBox { background: #FF8000 }
+#player2ColorBox { background: #FF8080 }

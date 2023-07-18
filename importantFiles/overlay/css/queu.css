@@ -1,0 +1,29 @@
+/* "transition duration" should be equal in time to variables.js "fadeOutTime" variable (convert seconds to milliseconds when applying this) */
+.changing {
+    opacity: 0 !important;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+    transition-timing-function: linear;
+}
+
+/* "transition-duration" should be equal in time to variables.js "fadeInTime" variable (convert seconds to milliseconds when applying this) */
+.changed {
+    opacity: 1 !important;
+    transition-duration: 0.5s;
+    transition-property: opacity;
+    transition-timing-function: linear;
+}
+
+/* "transition duration" should be equal in time to variables.js "fadeOutTime" variable (convert seconds to milliseconds when applying this) */
+.visibility.changing {
+    visibility: hidden !important;
+    transition-duration: 0.5s;
+    transition-property: visibility;
+}
+
+/* "transition-duration" should be equal in time to variables.js "fadeInTime" variable (convert seconds to milliseconds when applying this) */
+.visibility.changed {
+    visibility: visible !important;
+    transition-duration: 0.5s;
+    transition-property: visibility !important;
+}
